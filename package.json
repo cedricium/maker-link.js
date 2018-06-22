@@ -3,6 +3,7 @@
   "version": "1.0.0-beta.1",
   "description": "Pieter Levels' (@levelsio) Maker Link as a JavaScript library.",
   "main": "dist/maker-link.js",
+  "browser": "dist/maker-link.js",
   "scripts": {
     "dev": "webpack -w",
     "build": "webpack",
