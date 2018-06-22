@@ -1,0 +1,39 @@
+{
+  "name": "makerlink",
+  "version": "1.0.0-beta",
+  "description": "Pieter Levels' (@levelsio) Maker Link as a JavaScript library.",
+  "main": "dist/maker-link.js",
+  "scripts": {
+    "dev": "webpack -w",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cedric Amaya <amaya.cedric@gmail.com> (https://cedric.tech/)",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "uglifyjs-webpack-plugin": "^1.2.6",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedricium/makerlink.js.git"
+  },
+  "keywords": [
+    "maker",
+    "maker",
+    "link",
+    "levelsio"
+  ],
+  "bugs": {
+    "url": "https://github.com/cedricium/makerlink.js/issues"
+  },
+  "homepage": "https://github.com/cedricium/makerlink.js#readme"
+}
