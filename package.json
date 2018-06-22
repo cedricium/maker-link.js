@@ -1,6 +1,6 @@
 {
-  "name": "makerlink",
-  "version": "1.0.0-beta",
+  "name": "maker-link",
+  "version": "1.0.0-beta.1",
   "description": "Pieter Levels' (@levelsio) Maker Link as a JavaScript library.",
   "main": "dist/maker-link.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cedricium/makerlink.js.git"
+    "url": "git+https://github.com/cedricium/maker-link.js.git"
   },
   "keywords": [
     "maker",
@@ -33,7 +33,7 @@
     "levelsio"
   ],
   "bugs": {
-    "url": "https://github.com/cedricium/makerlink.js/issues"
+    "url": "https://github.com/cedricium/maker-link.js/issues"
   },
-  "homepage": "https://github.com/cedricium/makerlink.js#readme"
+  "homepage": "https://github.com/cedricium/maker-link.js#readme"
 }

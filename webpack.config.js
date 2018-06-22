@@ -5,8 +5,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
-    'maker-list': './src/index.js',
-    'maker-list.min': './src/index.js'
+    'maker-link': './src/index.js',
+    'maker-link.min': './src/index.js'
   },
   // devtool: 'source-map',
   output: {
