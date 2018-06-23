@@ -1864,6 +1864,7 @@ const {defaults} = __webpack_require__(2);
 
 /** Class representing a Maker Link. */
 class MakerLink {
+  /* eslint-disable max-len */
   /**
    * Creates a Maker Link element and appends it to the document's body.
    * @param {object} options Configuration object used for customizing the Maker Link element - SEE BELOW
@@ -1874,6 +1875,7 @@ class MakerLink {
    * @param {string} options.brandColor   string containing valid CSS representing the CSS `font-family` property
    */
   constructor(options) {
+  /* eslint-enable max-len */
     const DEFAULT_OPTS = {
       // HTML
       author: 'levelsio',
@@ -1887,6 +1889,7 @@ class MakerLink {
     this.options = defaults(options, DEFAULT_OPTS);
 
     const template =
+// eslint-disable-next-line
 `<a target="_blank" rel="noopener" class="makerlink" href="${this.options.redirectURL}">
   <img class="makerlink__img" src="${this.options.photoURL}"
     style="display: ${(this.options.photoURL) ? 'inline-block' : 'none'}" />
@@ -1896,7 +1899,8 @@ class MakerLink {
     const parser = new DOMParser();
     const makerLinkHTML = parser.parseFromString(template, 'text/html');
 
-    if (typeof MakerLink.makerLinkExists === 'undefined' || ! MakerLink.makerLinkExists) {
+    if (typeof MakerLink.makerLinkExists === 'undefined' ||
+        ! MakerLink.makerLinkExists) {
       document.body.appendChild(makerLinkHTML.body.firstChild);
       MakerLink.makerLinkExists = true;
     } else {
@@ -1908,15 +1912,17 @@ class MakerLink {
      * Dynamically adds CSS rules to a <style> element.
      * @see {@link https://stackoverflow.com/a/8051488|StackOverflow}
      */
-    const addRule = (function (style) {
+    const addRule = (function(style) {
       const styleEL = document.head.appendChild(style);
       styleEL.dataset.title = 'maker-link';
       const {sheet} = styleEL;
-      return function (selector, css) {
-        const propText = typeof css === 'string' ? css : Object.keys(css).map(function (property) {
-          return property + ':' + (property === 'content' ? '`' + css[property] + `'` : css[property]);
+      return function(selector, css) {
+        const propText = typeof css === 'string'
+          ? css : Object.keys(css).map(function(property) {
+          return property + ':' + (property === 'content'
+            ? '`' + css[property] + `'` : css[property]);
         }).join(';');
-        sheet.insertRule(selector + '{' + propText + '}', sheet.cssRules.length);
+        sheet.insertRule(selector + '{' + propText + '}', sheet.cssRules.length); // eslint-disable-line max-len
       };
     })(document.createElement('style'));
 
