@@ -1,5 +1,5 @@
 /**
- * maker-link.js v1.0.0-beta.3
+ * maker-link.js v1.0.0
  * https://github.com/cedricium/maker-link.js
  *
  * Copyright (c) 2018 - Cedric Amaya
