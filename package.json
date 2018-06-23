@@ -31,7 +31,7 @@
     "webpack-cli": "^3.0.8"
   },
   "directories": {
-    "example": "example"
+    "example": "demo"
   },
   "repository": {
     "type": "git",
