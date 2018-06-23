@@ -1,9 +1,9 @@
 # maker-link.js
 **JavaScript library for creating configurable Maker Links**
 
-[Maker Links](https://twitter.com/levelsio/status/985879093135589376) are small, unobtrusive buttons found at the bottom of all Pieter Levels' (@levelsio) websites.
+[Maker Links](https://twitter.com/levelsio/status/985879093135589376) are small, unobtrusive buttons found at the bottom right of all of Pieter Levels' (@levelsio) websites.
 When clicked, the button opens a new tab and navigates to his personal website, https://levels.io.
-This library allows you to easily and quickly add one to your own website without the need to alter your current site's code.
+This library allows you to easily customize and add one to your own website without the need to alter your current site's code.
 
 ## Download
 
@@ -16,8 +16,6 @@ This library allows you to easily and quickly add one to your own website withou
     - bower: *__Coming soon!__*
 
 2. Downloading the bundled library directly:
-
-    If you are using a static site, you can simply download the latest bundled source code to be used directly in your project.
 
     - Navigate to https://github.com/cedricium/maker-link.js/releases, select the most recent release and download the `maker-link.min.js` file
 
