@@ -1,5 +1,5 @@
 # maker-link.js
-**JavaScript library for creating configurable Maker Links**
+**JavaScript library for creating customizable Maker Links**
 
 [Maker Links](https://twitter.com/levelsio/status/985879093135589376) are small, unobtrusive buttons found at the bottom right of all of Pieter Levels' (@levelsio) websites.
 When clicked, the button opens a new tab and navigates to his personal website, https://levels.io.
@@ -49,7 +49,7 @@ Instantiate a new MakerLink object with `options` containing your information to
 
 ### Configuration
 
-It's super easy to customize the look and feel of your Maker Link. By passing an `options` object when instantiating MakerLink, you control what MakerLink displays.
+It's super easy to customize the look and feel of your Maker Link. By passing an `options` object when instantiating Maker Link, you control how Maker Link looks.
 
 `MakerLink([options])`
 
