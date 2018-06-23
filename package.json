@@ -1,13 +1,16 @@
 {
   "name": "maker-link",
-  "version": "1.0.0-beta.3",
+  "version": "0.0.0-development",
   "description": "Pieter Levels' (@levelsio) Maker Link as a JavaScript library.",
   "main": "dist/maker-link.js",
   "browser": "dist/maker-link.js",
   "scripts": {
+    "commit": "git-cz",
     "dev": "webpack -w",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "author": "Cedric Amaya <amaya.cedric@gmail.com> (https://cedric.tech/)",
   "license": "MIT",
@@ -16,6 +19,10 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "semantic-release": "^15.6.0",
+    "travis-deploy-once": "^5.0.0",
     "uglifyjs-webpack-plugin": "^1.2.6",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.8"
@@ -25,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cedricium/maker-link.js.git"
+    "url": "https://github.com/cedricium/maker-link.js.git"
   },
   "keywords": [
     "maker-link",
@@ -36,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/cedricium/maker-link.js/issues"
   },
-  "homepage": "https://github.com/cedricium/maker-link.js#readme"
+  "homepage": "https://github.com/cedricium/maker-link.js#readme",
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
