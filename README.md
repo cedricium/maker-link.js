@@ -5,6 +5,27 @@
 When clicked, the button opens a new tab and navigates to his personal website, https://levels.io.
 This library allows you to easily and quickly add one to your own website without the need to alter your current site's code.
 
+## Download
+
+`maker-link.js` is meant to be consumed in the browser using `<script>` tags. You have a couple of options when it comes to including `maker-link.js` in your project / site.
+
+1. Using a package manager (e.g. npm, yarn, bower, etc.):
+
+    - npm:  `npm i --save maker-link`
+    - yarn: *__Coming soon!__*
+    - bower: *__Coming soon!__*
+
+2. Downloading the bundled library directly:
+
+    If you are using a static site, you can simply download the latest bundled source code to be used directly in your project.
+
+    - Navigate to https://github.com/cedricium/maker-link.js/releases, select the most recent release and download the `maker-link.min.js` file
+
+3. Consuming `maker-link.js` via CDN:
+
+    - *__Coming soon!__*
+
+
 ## Usage
 
 Instantiate a new MakerLink object with `options` containing your information to have a Maker Link added to your site.
@@ -42,7 +63,7 @@ Type: `string`
 
 Default: `'levelsio'`
 
-Text to display inside the Maker Link (by **levelsio**).
+Text to display inside the Maker Link (by **levelsio**). Typically your name (Pieter Levels) or social-media handle (levelsio).
 
 ##### `photoURL`
 Type: `string`
@@ -88,9 +109,6 @@ String containing valid CSS representing the CSS `font-family` property. Any fon
 `font` option as well.
 
 More Information: [MDN `font-family` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
-
-
-## Download
 
 
 ## Contributing
