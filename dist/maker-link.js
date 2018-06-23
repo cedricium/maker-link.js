@@ -1852,9 +1852,27 @@ module.exports = function(module) {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {const {defaults} = __webpack_require__(2);
+/* WEBPACK VAR INJECTION */(function(global) {/**
+ * maker-link.js v1.0.0-beta.3
+ * https://github.com/cedricium/maker-link.js
+ *
+ * Copyright (c) 2018 - Cedric Amaya
+ * Released under the MIT license
+ */
 
+const {defaults} = __webpack_require__(2);
+
+/** Class representing a Maker Link. */
 class MakerLink {
+  /**
+   * Creates a Maker Link element and appends it to the document's body.
+   * @param {object} options Configuration object used for customizing the Maker Link element - SEE BELOW
+   * @param {string} options.author       text to display inside the Maker Link
+   * @param {string} options.photoURL     URL pointing to the maker's photo
+   * @param {string} options.redirectURL  URL of the desired destination address
+   * @param {string} options.font         string containing valid CSS representing the CSS `color` property
+   * @param {string} options.brandColor   string containing valid CSS representing the CSS `font-family` property
+   */
   constructor(options) {
     const DEFAULT_OPTS = {
       // HTML
@@ -1886,13 +1904,14 @@ class MakerLink {
       return;
     }
 
-    // Dynamically set CSS for the Maker Link
-    // refs: https://stackoverflow.com/a/8051488
+    /**
+     * Dynamically adds CSS rules to a <style> element.
+     * @see {@link https://stackoverflow.com/a/8051488|StackOverflow}
+     */
     const addRule = (function (style) {
       const styleEL = document.head.appendChild(style);
       styleEL.dataset.title = 'maker-link';
       const {sheet} = styleEL;
-
       return function (selector, css) {
         const propText = typeof css === 'string' ? css : Object.keys(css).map(function (property) {
           return property + ':' + (property === 'content' ? '`' + css[property] + `'` : css[property]);
