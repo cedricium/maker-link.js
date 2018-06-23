@@ -6,6 +6,7 @@ When clicked, the button opens a new tab and navigates to his personal website, 
 This library allows you to easily and quickly add one to your own website without the need to alter your current site's code.
 
 ## Usage
+
 Instantiate a new MakerLink object with `options` containing your information to have a Maker Link added to your site.
 
 
@@ -28,6 +29,7 @@ Instantiate a new MakerLink object with `options` containing your information to
 ```
 
 ### Configuration
+
 It's super easy to customize the look and feel of your Maker Link. By passing an `options` object when instantiating MakerLink, you control what MakerLink displays.
 
 `MakerLink([options])`
@@ -40,7 +42,7 @@ Type: `string`
 
 Default: `'levelsio'`
 
-Text to display inside the Maker Link (by **levelsio**)
+Text to display inside the Maker Link (by **levelsio**).
 
 ##### `photoURL`
 Type: `string`
@@ -49,14 +51,14 @@ Default: `'https://levels.io/levelsio.png'`
 
 URL pointing to the image you'd like displayed in the Maker Link.
 
-If an empty string (`''`) is given, then the Maker Link will hide the `<img>` element from the Maker Link.
+If an empty string (`''`) is given, then the Maker Link will hide the `<img>` element (by applying `display: none`).
 
 ##### `redirectURL`
 Type: `string`
 
 Default: `'https://levels.io'`
 
-URL pointing to the link you want user's to visit when the Maker Link is clicked.
+URL pointing to the link you want users to visit when the Maker Link is clicked.
 
 ##### `brandColor`
 Type: `string` - (`color` CSS property)
@@ -91,7 +93,17 @@ More Information: [MDN `font-family` CSS property](https://developer.mozilla.org
 ## Download
 
 
-## Community
+## Contributing
+
+Contributions are welcome from anyone and everyone. To contribute:
+
+1. **Fork** the repo on GitHub
+2. **Clone** the project to your own machine
+3. **Commit** changes to your own branch
+4. **Push** your work back up to your fork
+5. Submit a **Pull request** so that we can review your changes
+
+> Note: Be sure to merge the latest from "upstream" before making a pull request!
 
 
 ## License
