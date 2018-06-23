@@ -1,0 +1,16 @@
+# tests
+test
+*.test.js
+
+# build tools
+.travis.yml
+
+# linter
+.eslintrc*
+
+# examples / demo
+example
+demo
+
+# todos
+*.todo
