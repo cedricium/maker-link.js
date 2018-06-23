@@ -1,2 +1,98 @@
-# makerlink.js
-Pieter Levels' (@levelsio) Maker Link as a JavaScript library.
+# maker-link.js
+**JavaScript library for creating configurable Maker Links**
+
+[Maker Links](https://twitter.com/levelsio/status/985879093135589376) are small, unobtrusive buttons found at the bottom of all Pieter Levels' (@levelsio) websites.
+When clicked, the button opens a new tab and navigates to his personal website, https://levels.io.
+This library allows you to easily and quickly add one to your own website without the need to alter your current site's code.
+
+## Usage
+Instantiate a new MakerLink object with `options` containing your information to have a Maker Link added to your site.
+
+
+```html
+<!-- index.html -->
+
+<!-- Include the MakerLink library -->
+<script src="path/to/maker-link.js/"></script>
+
+<!-- Initialize MakerLink object -->
+<script>
+  const makerLink = new MakerLink({
+    author: "cedric amaya",
+    photoURL: "https://pbs.twimg.com/profile_images/1002035724076568576/8SSEXKp3_400x400.jpg",
+    redirectURL: "https://cedric.tech",
+    brandColor: '#007bff',
+    font: 'monospace',
+  });
+</script>
+```
+
+### Configuration
+It's super easy to customize the look and feel of your Maker Link. By passing an `options` object when instantiating MakerLink, you control what MakerLink displays.
+
+`MakerLink([options])`
+
+#### `options`
+Type: `Object`
+
+##### `author`
+Type: `string`
+
+Default: `'levelsio'`
+
+Text to display inside the Maker Link (by **levelsio**)
+
+##### `photoURL`
+Type: `string`
+
+Default: `'https://levels.io/levelsio.png'`
+
+URL pointing to the image you'd like displayed in the Maker Link.
+
+If an empty string (`''`) is given, then the Maker Link will hide the `<img>` element from the Maker Link.
+
+##### `redirectURL`
+Type: `string`
+
+Default: `'https://levels.io'`
+
+URL pointing to the link you want user's to visit when the Maker Link is clicked.
+
+##### `brandColor`
+Type: `string` - (`color` CSS property)
+
+Default: `'rgb(255, 71, 66)'`
+
+String containing valid CSS representing the CSS `color` property. Applied to the display text when hovered.
+
+Possible Values:
+
+```
+A <color> can be defined in any of the following ways:
+
+  - Using a keyword (such as 'blue' or 'transparent')
+  - Using the RGB cubic-coordinate system (via the '#-hexadecimal' or the 'rgb()' and 'rgba()' functional notations)
+  - Using the HSL cylindrical-coordinate system (via the 'hsl()' and 'hsla()' functional notations)
+```
+
+More Information: [MDN `color` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+
+##### `font`
+Type: `string` - (`font-family` CSS property)
+
+Default: `'"Helvetica Neue", sans-serif'`
+
+String containing valid CSS representing the CSS `font-family` property. Any font that your site has access to is fair game for the Maker Link
+`font` option as well.
+
+More Information: [MDN `font-family` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+
+
+## Download
+
+
+## Community
+
+
+## License
+[MIT](./LICENSE.md)
