@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+
+font name: sen-bold
+font link: http://www.philatype.com/#sen
+font author: Philatype
+font author site: http://www.philatype.com/
+
+icon designer: Rflor
+icon designer link: /rflor
+        
+{"bg":"#ffffff","icon-gradient-0":"#181B80","icon-gradient-1":"#181ED9","font":"#000000"}
+      
