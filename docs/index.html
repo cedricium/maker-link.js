@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>maker-link.js</title>
-	<meta name="description" content="maker-link.js" />
+  <title>maker-link.js</title>
+  <meta name="description" content="maker-link.js" />
   <meta name="author" content="Cedric Amaya" />
 
   <link rel="stylesheet" href="css/code-snippet.css" />
@@ -121,31 +121,31 @@
               INPUTS bound to Vue `options` object used to customize the Maker Link
               =====================================================================
             -->
-    
+
             <div class="field">
               <label class="label"for="author">author:</label>
               <input class="input" name="author" v-model="options.author">
               <p class="help">Text displayed after "by". Typically a name or social-media handle.</p>
             </div>
-    
+
             <div class="field">
               <label class="label"for="photoURL">photoURL:</label>
               <input class="input" name="photoURL" v-model="options.photoURL">
               <p class="help">Link pointing to the image you'd liked displayed.</p>
             </div>
-    
+
             <div class="field">
               <label class="label"for="redirectURL">redirectURL:</label>
               <input class="input" name="redirectURL" v-model="options.redirectURL">
               <p class="help">Link to the address you want users to visit when Maker Link is clicked.</p>
             </div>
-    
+
             <div class="field">
             <label class="label"for="font">font:</label>
               <input class="input" name="font" v-model="options.font">
               <p class="help">CSS <code>font-family</code> string - any font your site has access to, Maker Link can use.</p>
             </div>
-    
+
             <div class="field">
               <label class="label"for="brandColor">brandColor:</label>
               <input class="input" name="brandColor" v-model="options.brandColor">
@@ -166,7 +166,7 @@
                 <img class="makerlink__img" :src="options.photoURL" v-if="options.photoURL" />
                 <p class="makerlink__author" :style="{ fontFamily: options.font }">by {{options.author}}</p>
               </a>
-  
+
             </div>
 
             <div class="bd-snippet-code highlight-full ">
