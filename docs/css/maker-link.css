@@ -1,0 +1,37 @@
+.container-makerlink {
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.makerlink {
+  --brandColor: lightcoral;
+  z-index: 100;
+  border-radius: 5px;
+  padding: 1rem;
+  border: 2px solid #efefef;
+  background: #fff;
+  color: #6f6f6f;
+  text-decoration: none;
+}
+
+.makerlink:hover {
+  background: #fff;
+  color: var(--brandColor);
+}
+
+.makerlink .makerlink__img {
+  border-radius: 100%;
+  width: 2rem;
+  vertical-align: middle;
+}
+
+.makerlink .makerlink__author {
+  margin: 0;
+  vertical-align: middle;
+  display: inline;
+  margin: 0 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+}

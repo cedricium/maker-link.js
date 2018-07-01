@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>maker-link.js</title>
+	<meta name="description" content="maker-link.js" />
+  <meta name="author" content="Cedric Amaya" />
+
+  <link rel="stylesheet" href="css/code-snippet.css" />
+  <link rel="stylesheet" href="css/maker-link.css" />
+  <link rel="stylesheet" href="css/syntax-highlighting.css" />
+  <link rel="stylesheet" href="css/vendor/bulma.min.css" />
+
+  <!-- <meta property="fb:app_id" content="123456789"> -->
+  <meta property="og:url" content="https://cedric.tech/maker-link.js/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="maker-link.js">
+  <meta property="og:image" content="http://example.com/image.jpg">
+  <meta property="og:description" content="JavaScript library for creating customizable Maker Links.">
+  <meta property="og:site_name" content="maker-link.js">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@CedricAmaya">
+  <meta name="twitter:url" content="https://cedric.tech/maker-link.js/">
+  <meta name="twitter:title" content="maker-link.js">
+  <meta name="twitter:description" content="JavaScript library for creating customizable Maker Links.">
+  <meta name="twitter:image" content="http://example.com/image.jpg">
+</head>
+<body>
+
+  <div id="app">
+
+    <section class="section about is-small">
+      <div class="container">
+        <h1 class="title is-2">maker-link.js</h1>
+        <h2 class="subtitle">JavaScript library for creating customizable Maker Links.</h2>
+
+        <div class="content">
+          <p>
+            Maker Links are small, unobtrusive buttons found at the bottom right of all of Pieter Levels' (<a href="https://twitter.com/levelsio" target="_blank">@levelsio</a>) websites.
+            When clicked, the button opens a new tab and navigates to his personal website.
+            <code>maker-link.js</code> allows makers to easily customize and add one to their own website without the need to
+            alter their current site's code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="generator" class="section">
+      <div class="container">
+        <h3 class="title is-3">Maker Link Generator</h3>
+
+        <div class="columns is-variable is-4">
+          <div class="column">
+
+            <!--
+              =====================================================================
+              INPUTS bound to Vue `options` object used to customize the Maker Link
+              =====================================================================
+            -->
+    
+            <div class="field">
+              <label class="label"for="author">author:</label>
+              <input class="input" name="author" v-model="options.author">
+              <p class="help">Text displayed after "by". Typically a name or social-media handle.</p>
+            </div>
+    
+            <div class="field">
+              <label class="label"for="photoURL">photoURL:</label>
+              <input class="input" name="photoURL" v-model="options.photoURL">
+              <p class="help">Link pointing to the image you'd liked displayed.</p>
+            </div>
+    
+            <div class="field">
+              <label class="label"for="redirectURL">redirectURL:</label>
+              <input class="input" name="redirectURL" v-model="options.redirectURL">
+              <p class="help">Link to the address you want users to visit when Maker Link is clicked.</p>
+            </div>
+    
+            <div class="field">
+            <label class="label"for="font">font:</label>
+              <input class="input" name="font" v-model="options.font">
+              <p class="help">CSS <code>font-family</code> string - any font your site has access to, Maker Link can use.</p>
+            </div>
+    
+            <div class="field">
+              <label class="label"for="brandColor">brandColor:</label>
+              <input class="input" name="brandColor" v-model="options.brandColor">
+              <p class="help">CSS <code>color</code> string - can be any format (<code>keyword</code>, <code>rgb(a)</code>, <code>hsl(a)</code>, etc.)</p>
+            </div>
+
+          </div>
+
+          <div class="column">
+
+            <div class="container-makerlink has-text-centered">
+          <!--
+            =====================================================================
+            MAKER LINK that gets auto-updated as INPUT field values are altered
+            =====================================================================
+          -->
+              <a target="_blank" rel="noopener" class="makerlink" :href="options.redirectURL" :style="{ '--brandColor': options.brandColor }">
+                <img class="makerlink__img" :src="options.photoURL" v-if="options.photoURL" />
+                <p class="makerlink__author" :style="{ fontFamily: options.font }">by {{options.author}}</p>
+              </a>
+  
+            </div>
+
+            <div class="bd-snippet-code highlight-full ">
+              <figure id="js-bkg" class="highlight">
+          <!--
+            =====================================================================
+            READONLY OBJECT with props bound to Vue `options` object for copying
+            =====================================================================
+          -->
+                <pre><code class="language-js" data-lang="js">
+<span class="stx-keyword">const</span> <span class="stx-variable">makerLink</span> = <span class="stx-keyword">new</span> <span class="stx-fxn_name">MakerLink</span>({
+  author<span class="stx-punctuation">:</span> <span class="stx-string">'{{ options.author }}'</span>,
+  photoURL<span class="stx-punctuation">:</span> <span class="stx-string">'{{ options.photoURL }}'</span>,
+  redirectURL<span class="stx-punctuation">:</span> <span class="stx-string">'{{ options.redirectURL }}'</span>,
+  font<span class="stx-punctuation">:</span> <span class="stx-string">'{{ options.font }}'</span>,
+  brandColor<span class="stx-punctuation">:</span> <span class="stx-string">'{{ options.brandColor }}'</span>,
+});</code></pre>
+                <button id="copyBtn" onclick="copyText()" class="button is-small bd-copy" onmouseover="chbg('#ffdd57')" onmouseout="chbg('#fff')">Copy</button>
+              </figure>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="../dist/maker-link.min.js"></script>
+  <script>
+    function copyText() {
+      const codeNode = document.querySelector('code.language-js');
+
+      if (document.body.createTextRange) {
+        const range = document.body.createTextRange();
+        range.moveToElementText(codeNode);
+        range.select();
+      } else if (window.getSelection) {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(codeNode);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    }
+
+    function chbg(color) {
+      document.getElementById('js-bkg').style.borderColor = color;
+    }
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        options: {
+          author: 'levelsio',
+          photoURL: 'https://levels.io/levelsio.png',
+          redirectURL: 'https://levels.io',
+          font: 'monospace',
+          brandColor: 'rgb(255, 71, 66)',
+          textarea: ''
+        }
+      }
+    });
+  </script>
+</body>
+</html>

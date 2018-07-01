@@ -16,6 +16,7 @@
   "author": "Cedric Amaya <amaya.cedric@gmail.com> (https://cedric.tech/)",
   "license": "MIT",
   "dependencies": {
+    "bulma": "^0.7.1",
     "underscore": "^1.9.1"
   },
   "devDependencies": {

@@ -1,0 +1,8 @@
+.stx-punctuation,
+.stx-keyword { color: red; }
+
+.stx-variable { color: blue; }
+
+.stx-fxn_name { color: rgb(128, 0, 200); }
+
+.stx-string { color: rgba(0,0,255,0.75); }
