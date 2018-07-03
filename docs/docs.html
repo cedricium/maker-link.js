@@ -35,6 +35,17 @@
   <meta name="twitter:title" content="maker-link.js">
   <meta name="twitter:description" content="JavaScript library for creating customizable Maker Links.">
   <meta name="twitter:image" content="http://example.com/image.jpg">
+
+  <style>
+    /* aside.menu {
+      position: fixed;
+    } */
+
+    .ml-code {
+      font-family: monospace;
+      font-size: 95%;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
@@ -86,6 +97,93 @@
       </div>
     </div>
   </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <aside class="menu">
+            <p class="menu-label">
+              Essentials
+            </p>
+            <ul class="menu-list">
+              <li>
+                <a href="#installation">Installation</a>
+                <ul>
+                  <li><a href="#direct-include">Direct &lt;script&gt; Include</a></li>
+                  <li><a href="#cdn">CDN</a></li>
+                  <li><a href="#npm">npm</a></li>
+                  <li><a href="#bower">Bower</a></li>
+                  <li><a href="#yarn">Yarn</a></li>
+                </ul>
+              </li>
+              <li>
+                <a>Introduction</a>
+                <ul>
+                  <li><a href="#what-is-maker-links-js">What is maker-link.js?</a></li>
+                  <li><a href="#getting-started">Getting Started</a></li>
+                </ul>
+              </li>
+            </ul>
+            <p class="menu-label">
+              Usage
+            </p>
+            <ul class="menu-list">
+              <li><a>Setup</a></li>
+              <li>
+                <a>Customization</a>
+                <ul>
+                  <li><a class="ml-code">author</a></li>
+                  <li><a class="ml-code">photoURL</a></li>
+                  <li><a class="ml-code">redirectURL</a></li>
+                  <li><a class="ml-code">brandColor</a></li>
+                  <li><a class="ml-code">font</a></li>
+                </ul>
+              </li>
+            </ul>
+            <p class="menu-label">
+              Contributing
+            </p>
+            <p class="menu-label">
+              License
+            </p>
+          </aside>
+        </div>
+        <div class="column">
+          <div class="content">
+            <h1 id="installation">Installation</h1>
+            
+            <h2 class="is-size-4" id="direct-include">Direct &lt;script&gt; Include</h2>
+            <p>You can download the latest release tarball directly from <a href="https://github.com/cedricium/maker-link.js/releases">maker-link.js releases</a>.</p>
+            
+            <h2 class="is-size-4" id="cdn">CDN</h2>
+            <span class="tag is-info">Coming soon!</span>
+            
+            <h2 class="is-size-4" id="npm">npm</h2>
+            <code style="padding: 0.75rem">$ npm install maker-link</code>
+            
+            <h2 class="is-size-4" id="bower">Bower</h2>
+            <span class="tag is-info">Coming soon!</span>
+            
+            <h2 class="is-size-4" id="yarn">Yarn</h2>
+            <span class="tag is-info">Coming soon!</span>
+
+
+            <h1 id="introduction">Introduction</h1>
+            
+            <h2 class="is-size-4" id="what-is-maker-links-js">What is maker-links.js?</h2>
+            <p>maker-links.js is a JavaScript-only port of Pieter Levels&#39; Maker Links. Created by <a href="https://twitter.com/CedricAmaya">Cedric Amaya</a>, this library aims to simplify the process of adding Maker Links to a website by getting rid of the need to write additional HTML and CSS, and instead only instantiate a simple JavaScript object.</p>
+            
+            <h2 class="is-size-4" id="getting-started">Getting Started</h2>
+            <blockquote>
+            <p>The official guide assumes basic level knowledge of HTML, CSS, and JavaScript. If you are totally new to frontend development, it is strongly encouraged you take a look at the cited references (typically MDN web development documentation).</p>
+            </blockquote>
+            <p>The easiest way to try out maker-link.js is using the official <a href="generator.html">Generator</a> which allows you to customize a Maker Link in real-time. Otherwise, follow one of the <a href="#installation">Installation</a> steps and continue reading.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
