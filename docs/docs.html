@@ -8,7 +8,7 @@
   <title>Docs | maker-link.js</title>
   <meta name="description" content="maker-link.js" />
   <meta name="author" content="Cedric Amaya" />
-  
+
   <link rel="stylesheet" href="css/code-snippet.css" />
   <link rel="stylesheet" href="css/maker-link.css" />
   <link rel="stylesheet" href="css/syntax-highlighting.css" />
@@ -35,6 +35,10 @@
   <meta name="twitter:title" content="maker-link.js">
   <meta name="twitter:description" content="JavaScript library for creating customizable Maker Links.">
   <meta name="twitter:image" content="http://example.com/image.jpg">
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/mono-blue.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
   <style>
     /* aside.menu {
@@ -129,15 +133,15 @@
               Usage
             </p>
             <ul class="menu-list">
-              <li><a>Setup</a></li>
+              <li><a href="#setup">Setup</a></li>
               <li>
-                <a>Customization</a>
+                <a href="#customization">Customization</a>
                 <ul>
-                  <li><a class="ml-code">author</a></li>
-                  <li><a class="ml-code">photoURL</a></li>
-                  <li><a class="ml-code">redirectURL</a></li>
-                  <li><a class="ml-code">brandColor</a></li>
-                  <li><a class="ml-code">font</a></li>
+                  <li><a class="ml-code" href="#-author-">author</a></li>
+                  <li><a class="ml-code" href="#-photourl-">photoURL</a></li>
+                  <li><a class="ml-code" href="#-redirecturl-">redirectURL</a></li>
+                  <li><a class="ml-code" href="#-brandcolor-">brandColor</a></li>
+                  <li><a class="ml-code" href="#-font-">font</a></li>
                 </ul>
               </li>
             </ul>
@@ -152,33 +156,105 @@
         <div class="column">
           <div class="content">
             <h1 id="installation">Installation</h1>
-            
-            <h2 class="is-size-4" id="direct-include">Direct &lt;script&gt; Include</h2>
-            <p>You can download the latest release tarball directly from <a href="https://github.com/cedricium/maker-link.js/releases">maker-link.js releases</a>.</p>
-            
+
+            <h2 class="is-size-4" id="direct-include">Direct <code>&lt;script&gt;</code> Include</h2>
+            <p>
+              Simply download and include with a script tag. <code>MakerLink</code> will be registered as a global variable.
+              Download the latest release tarball directly from <a href="https://github.com/cedricium/maker-link.js/releases">maker-link.js releases</a>.
+            </p>
+
             <h2 class="is-size-4" id="cdn">CDN</h2>
             <span class="tag is-info">Coming soon!</span>
-            
+
             <h2 class="is-size-4" id="npm">npm</h2>
-            <code style="padding: 0.75rem">$ npm install maker-link</code>
-            
+            <p>npm is the recommended installation method.</p>
+            <pre><code class="lang-shell"><span class="hljs-comment"># latest stable</span>&NewLine;$ npm <span class="hljs-keyword">install</span> maker-link</code></pre>
+
             <h2 class="is-size-4" id="bower">Bower</h2>
             <span class="tag is-info">Coming soon!</span>
-            
+
             <h2 class="is-size-4" id="yarn">Yarn</h2>
             <span class="tag is-info">Coming soon!</span>
 
 
             <h1 id="introduction">Introduction</h1>
-            
+
             <h2 class="is-size-4" id="what-is-maker-links-js">What is maker-links.js?</h2>
-            <p>maker-links.js is a JavaScript-only port of Pieter Levels&#39; Maker Links. Created by <a href="https://twitter.com/CedricAmaya">Cedric Amaya</a>, this library aims to simplify the process of adding Maker Links to a website by getting rid of the need to write additional HTML and CSS, and instead only instantiate a simple JavaScript object.</p>
-            
+            <p>
+              maker-links.js is a JavaScript-only port of Pieter Levels&#39; Maker Links. Created by
+              <a href="https://twitter.com/CedricAmaya">Cedric Amaya</a>,
+              this library aims to simplify the process of adding Maker Links to a website by getting rid of the need to write additional HTML and CSS,
+              and instead only instantiate a simple JavaScript object.
+            </p>
+
             <h2 class="is-size-4" id="getting-started">Getting Started</h2>
             <blockquote>
-            <p>The official guide assumes basic level knowledge of HTML, CSS, and JavaScript. If you are totally new to frontend development, it is strongly encouraged you take a look at the cited references (typically MDN web development documentation).</p>
+              <p>
+                The official guide assumes basic level knowledge of HTML, CSS, and JavaScript. If you are totally new to frontend development,
+                it is strongly encouraged you take a look at the cited references (typically MDN web development documentation).
+              </p>
             </blockquote>
-            <p>The easiest way to try out maker-link.js is using the official <a href="generator.html">Generator</a> which allows you to customize a Maker Link in real-time. Otherwise, follow one of the <a href="#installation">Installation</a> steps and continue reading.</p>
+            <p>
+              The easiest way to try out maker-link.js is using the official <a href="generator.html">Generator</a>
+              which allows you to customize a Maker Link in real-time. Otherwise, follow one of the <a href="#installation">Installation</a>
+              steps and continue reading.
+            </p>
+
+
+            <h1 id="setup">Setup</h1>
+            <p>Instantiate a new <code>MakerLink</code> object with <code>options</code> containing your information to have a Maker Link automatically added to your site.</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- index.html --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Include the MakerLink library --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"path/to/maker-link.js/"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Initialize MakerLink object --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+<span class="hljs-keyword">const</span> makerLink = <span class="hljs-keyword">new</span> MakerLink({
+  author: <span class="hljs-string">"cedric amaya"</span>,
+  photoURL: <span class="hljs-string">"https://pbs.twimg.com/profile_images/1002035724076568576/8SSEXKp3_400x400.jpg"</span>,
+  redirectURL: <span class="hljs-string">"https://cedric.tech"</span>,
+  brandColor: <span class="hljs-string">'#007bff'</span>,
+  font: <span class="hljs-string">'monospace'</span>,
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+
+            <h1 id="customization">Customization</h1>
+            <p>
+              Customization of the Maker Link is controlled by the options passed to the <code>MakerLink</code> constructor. See below for more information
+              about the specific properties of the <code>options</code> object.
+            </p>
+
+            <h2 class="ml-code is-size-4" id="-author-">author</h2>
+            <p><strong>Type:</strong> <code>String</code></p>
+            <p><strong>Default:</strong> <code>&#39;levelsio&#39;</code></p>
+            <p>Text to display inside the Maker Link. Typically your name or social-media handle.</p>
+
+            <h2 class="ml-code is-size-4" id="-photourl-">photoURL</h2>
+            <p><strong>Type:</strong> <code>String</code></p>
+            <p><strong>Default:</strong> <code>&#39;https://levels.io/levelsio.png&#39;</code></p>
+            <p>URL pointing to the image you&#39;d like displayed in the Maker Link.</p>
+            <p>If an empty string (<code>&#39;&#39;</code>) is given, then the Maker Link will hide the <code>&lt;img&gt;</code> element (by applying <code>display: none</code>).</p>
+
+            <h2 class="ml-code is-size-4" id="-redirecturl-">redirectURL</h2>
+            <p><strong>Type:</strong> <code>String</code></p>
+            <p><strong>Default:</strong> <code>&#39;https://levels.io/&#39;</code></p>
+            <p>URL pointing to the link you want users to visit when the Maker Link is clicked.</p>
+
+            <h2 class="ml-code is-size-4" id="-brandcolor-">brandColor</h2>
+            <p><strong>Type:</strong> <code>String</code></p>
+            <p><strong>Default:</strong> <code>&#39;rgb(255, 71, 66)&#39;</code></p>
+            <p>String containing valid CSS representing the CSS <code>color</code> property. Applied to the display text when hovered.</p>
+            </code></pre><p>More Information: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">MDN <code>color</code> CSS property</a></p>
+
+            <h2 class="ml-code is-size-4" id="-font-">font</h2>
+            <p><strong>Type:</strong> <code>String</code></p>
+            <p><strong>Default:</strong> <code>&#39;&quot;Helvetica Neue&quot;, sans-serif&#39;</code></p>
+            <p>String containing valid CSS representing the CSS <code>font-family</code> property. Any font that your site has access to is fair game for the Maker Link
+            <code>font</code> option as well.</p>
+            <p>More Information: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">MDN <code>font-family</code> CSS property</a></p>
+
           </div>
         </div>
       </div>
