@@ -122,7 +122,7 @@
                 </ul>
               </li>
               <li>
-                <a>Introduction</a>
+                <a href="#introduction">Introduction</a>
                 <ul>
                   <li><a href="#what-is-maker-links-js">What is maker-link.js?</a></li>
                   <li><a href="#getting-started">Getting Started</a></li>
@@ -148,9 +148,30 @@
             <p class="menu-label">
               Contributing
             </p>
+            <ul class="menu-list">
+              <li>
+                <a href="#how-to-contribute">How to Contribute</a>
+                <ul>
+                  <li><a href="#steps-for-contributing">Steps for Contributing</a></li>
+                  <li><a href="#open-development">Open Development</a></li>
+                  <li><a href="#semantic-versioning">Semantic Versioning</a></li>
+                  <li>
+                    <a href="#bugs">Bugs</a>
+                    <ul>
+                      <li><a href="#where-to-find-known-issues">Where to Find Known Issues</a></li>
+                      <li><a href="#reporting-new-issues">Reporting New Issues</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
             <p class="menu-label">
-              License
+              Acknowledgements
             </p>
+            <ul class="menu-list">
+              <li><a href="#contributors">Contributors</a></li>
+              <li><a href="#licenses">Licenses</a></li>
+            </ul>
           </aside>
         </div>
         <div class="column">
@@ -235,7 +256,10 @@
             <p><strong>Type:</strong> <code>String</code></p>
             <p><strong>Default:</strong> <code>&#39;https://levels.io/levelsio.png&#39;</code></p>
             <p>URL pointing to the image you&#39;d like displayed in the Maker Link.</p>
-            <p>If an empty string (<code>&#39;&#39;</code>) is given, then the Maker Link will hide the <code>&lt;img&gt;</code> element (by applying <code>display: none</code>).</p>
+            <p>
+              If an empty string (<code>&#39;&#39;</code>) is given, then the Maker Link will hide
+              the<code>&lt;img&gt;</code> element (by applying <code>display: none</code>).
+            </p>
 
             <h2 class="ml-code is-size-4" id="-redirecturl-">redirectURL</h2>
             <p><strong>Type:</strong> <code>String</code></p>
@@ -254,6 +278,104 @@
             <p>String containing valid CSS representing the CSS <code>font-family</code> property. Any font that your site has access to is fair game for the Maker Link
             <code>font</code> option as well.</p>
             <p>More Information: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">MDN <code>font-family</code> CSS property</a></p>
+
+            <h1 id="how-to-contribute">How to Contribute</h1>
+            <p>Contributions are welcome from anyone and everyone.</p>
+
+            <h2 id="steps-for-contributing">Steps for Contributing</h2>
+            <ol>
+            <li><strong>Fork</strong> the repo on GitHub</li>
+            <li><strong>Clone</strong> the project to your own machine</li>
+            <li><strong>Commit</strong> changes to your own branch</li>
+            <li><strong>Push</strong> your work back up to your fork</li>
+            <li>Submit a <strong>Pull request</strong> so that we can review your changes</li>
+            </ol>
+            <blockquote>
+            <p>Note: Be sure to merge the latest from &quot;upstream&quot; before making a pull request!</p>
+            </blockquote>
+
+
+            <h2 id="open-development">Open Development</h2>
+            <p>
+              All work on maker-link.js happens directly on <a href="https://github.com/cedricium/maker-link.js/">GitHub</a>.
+              Both core team members and external contributors send pull requests which go through the same review process.
+            </p>
+
+            <h2 id="semantic-versioning">Semantic Versioning</h2>
+            <p>
+              maker-link.js follows <a href="https://semver.org/">semantic versioning</a>. We release patch versions for
+              bugfixes, minor versions for new features, and major versions for any breaking changes. When we make breaking
+              changes, we also introduce deprecation warnings in a minor version so that our users learn about the upcoming
+              changes and migrate their code in advance.
+            </p>
+
+            <h2 id="bugs">Bugs</h2>
+            <h3 id="where-to-find-known-issues">Where to Find Known Issues</h3>
+            <p>
+              We are using <a href="https://github.com/cedricium/maker-link.js/issues">GitHub Issues</a> for our public
+              bugs. We keep a close eye on this and try to make it clear when we have an internal fix in progress.
+              Before filing a new task, try to make sure your problem doesn’t already exist.
+            </p>
+
+            <h3 id="reporting-new-issues">Reporting New Issues</h3>
+            <p>The best way to get your bug fixed is to provide a reduced test case.</p>
+
+            <h1 id="contributors">Contributors</h1>
+            <p>Special thanks to those who have helped <code>maker-link.js</code>:</p>
+            <ul>
+              <li>Cedric Amaya (<a href="https://twitter.com/CedricAmaya/">@CedricAmaya</a>)</li>
+            </ul>
+
+            <h1 id="licenses">Licenses</h1>
+            <p><strong>maker-link.js Logo</strong></p>
+            <p>
+              &quot;<a href="https://thenounproject.com/rflor/collection/impossible-objects/?i=358753">impossible shape</a>&quot;
+              by Rflor from <a href="https://thenounproject.com/">The Noun Project</a>.
+            </p>
+            <p><strong>Landing Page Link Graphic</strong></p>
+            <p>
+              &quot;SEO Marketing Icon Set, Link&quot;
+              by Lukasz Adam from <a href="https://lukaszadam.com/illustrations">Lukasz Adam</a> under the MIT License.
+            </p>
+            <p><strong>Bulma</strong></p>
+            <p>The MIT License (MIT)</p>
+            <p>Copyright (c) 2018 Jeremy Thomas</p>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the &quot;Software&quot;), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in
+            all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+            THE SOFTWARE.</p>
+            <p><strong>Underscore</strong></p>
+            <p>Copyright (c) 2009-2018 Jeremy Ashkenas, DocumentCloud and Investigative
+            Reporters &amp; Editors</p>
+            <p>Permission is hereby granted, free of charge, to any person
+            obtaining a copy of this software and associated documentation
+            files (the &quot;Software&quot;), to deal in the Software without
+            restriction, including without limitation the rights to use,
+            copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the
+            Software is furnished to do so, subject to the following
+            conditions:</p>
+            <p>The above copyright notice and this permission notice shall be
+            included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+            OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+            NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+            HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+            WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+            FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+            OTHER DEALINGS IN THE SOFTWARE.</p>
 
           </div>
         </div>
