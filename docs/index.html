@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>maker-link.js</title>
+  <meta name="description" content="JavaScript library for creating customizable Maker Links." />
+  <meta name="author" content="Cedric Amaya" />
+
+  <link rel="icon" href="res/favicon.png">
+
+  <meta name="theme-color" content="#181B80">
+
+  <link rel="stylesheet" href="css/vendor/bulma.min.css" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css"
+    integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css"
+    integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+
+  <!-- <meta property="fb:app_id" content="123456789"> -->
+  <meta property="og:url" content="https://cedric.tech/maker-link.js/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="maker-link.js">
+  <meta property="og:image" content="https://cedric.tech/maker-link.js/res/icon.png">
+  <meta property="og:description" content="JavaScript library for creating customizable Maker Links.">
+  <meta property="og:site_name" content="maker-link.js">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Cedric Amaya">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@CedricAmaya">
+  <meta name="twitter:url" content="https://cedric.tech/maker-link.js/">
+  <meta name="twitter:title" content="maker-link.js">
+  <meta name="twitter:description" content="JavaScript library for creating customizable Maker Links.">
+  <meta name="twitter:image" content="https://cedric.tech/maker-link.js/res/icon.png">
+
+
+  <style>
+    div.column.has-content-vcentered {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    p.install-text code {
+      border-radius: 5px;
+      padding: 1rem;
+    }
+
+    p.install-text code::before {
+      content: '$ ';
+    }
+
+    p.install-text code:hover {
+      cursor: text;
+    }
+
+    p.install-text code:hover span {
+      background: pink;
+    }
+
+    section.hero.is-fullheight {
+      min-height: calc(100vh - 5.25rem);
+    }
+
+    figure.image.illustration {
+      height: 100%;
+      width: 100%;
+      background-image: url("res/link-graphic.svg");
+      background-size: contain;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <img src="res/icon-cropped.png" alt="maker-link.js: JavaScript library for creating customizable Maker Links.">
+        </a>
+
+        <a role="button" class="navbar-burger" data-target="makerlink-navbar" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="makerlink-navbar" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="docs"> <!-- TODO: add href -->
+            Docs
+          </a>
+          <a class="navbar-item" href="generator"> <!-- TODO: add href -->
+            Generator
+          </a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item" href="https://twitter.com/CedricAmaya/" target="_blank">
+            <span class="icon has-text-info">
+              <i class="fab fa-twitter fa-lg"></i>
+            </span>
+          </a>
+          <a class="navbar-item" href="https://github.com/cedricium/maker-link.js/" target="_blank">
+            <span class="icon has-text-dark">
+              <i class="fab fa-github fa-lg"></i>
+            </span>
+          </a>
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="button is-link" href="https://github.com/cedricium/maker-link.js/releases/download/v1.0.0/maker-link.js_1.0.0.zip">
+                  <span>Download</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-variable is-2">
+          <div class="column has-content-vcentered">
+            <h1 class="title is-2" style="font-weight: 400">
+            <strong style="font-weight: 600">maker-link.js</strong> is an open source JavaScript library for creating customizable Maker Links.
+            </h1>
+
+            <div class="call-to-action content is-hidden-touch ">
+              <p class="install-text is-size-3">
+                <code><span>npm i maker-link</span></code>
+              </p>
+              <div class="notification is-link is-hidden copy-notification">Copied to clipboard!</div>
+            </div>
+
+            <div class="buttons">
+              <a class="button is-link is-large" href="https://github.com/cedricium/maker-link.js/releases/download/v1.0.0/maker-link.js_1.0.0.zip">
+                <strong>Download</strong>&nbsp;v1.0.0
+              </a>
+              <a class="button is-light is-large" href="docs">
+                View&nbsp;<strong>docs</strong>
+              </a>
+            </div>
+          </div>
+          <div class="column has-content-vcentered is-hidden-mobile">
+            <figure class="image illustration"></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbarBurger = document.querySelector('a.navbar-burger');
+      if (navbarBurger) {
+        navbarBurger.addEventListener('click', () => {
+          const target = navbarBurger.dataset.target;
+          const $target = document.getElementById(target);
+
+          navbarBurger.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      }
+    });
+  </script>
+</html>
